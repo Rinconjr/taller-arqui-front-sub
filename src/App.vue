@@ -29,28 +29,29 @@ export default {
     this.connectWebSocket();
   },
   methods: {
-    connectWebSocket() {
-      const wsUrl = 'wss://localhost:7016/ws'; // URL del WebSocket
-      this.webSocket = new WebSocket(wsUrl);
+  connectWebSocket() {
+    const wsUrl = 'wss://localhost:7016/ws'; // Ajusta la URL del WebSocket al puerto HTTPS
+    this.webSocket = new WebSocket(wsUrl);
 
-      this.webSocket.onopen = () => {
-        console.log('Conectado al WebSocket');
-      };
+    this.webSocket.onopen = () => {
+      console.log('Conectado al WebSocket');
+    };
 
-      this.webSocket.onmessage = (event) => {
-        // Añadir el mensaje recibido al array de mensajes
-        this.messages.push(event.data);
-      };
+    this.webSocket.onmessage = (event) => {
+      // Añadir el mensaje recibido al array de mensajes
+      this.messages.push(event.data);
+    };
 
-      this.webSocket.onclose = () => {
-        console.log('Desconectado del WebSocket');
-      };
+    this.webSocket.onclose = () => {
+      console.log('Desconectado del WebSocket');
+    };
 
-      this.webSocket.onerror = (error) => {
-        console.error('Error en WebSocket:', error);
-      };
-    }
+    this.webSocket.onerror = (error) => {
+      console.error('Error en WebSocket:', error);
+    };
   }
+}
+
 }
 </script>
 
