@@ -9,20 +9,17 @@ Este proyecto es una aplicación frontend construida con Vue.js que se conecta a
 - npm o yarn
 - Servicio .NET configurado con WebSocket y suscrito a RabbitMQ
 
-## Configuración del Proyecto
-
-1. Clona el repositorio:
-    ```bash
-    git clone <URL-del-repositorio>
-    cd nombre-del-repositorio
-    ```
-
-2. Instala las dependencias:
-    ```bash
-    npm install
-    ```
-
 ## Comandos
+
+### Ejecutar la aplicación con Docker Compose
+
+Para ejecutar la aplicación, utiliza el siguiente comando:
+
+```bash
+docker-compose up
+```
+
+Este comando levantará los servicios necesarios definidos en el archivo `docker-compose.yml` para ejecutar la aplicación.
 
 ### Compilar y recargar automáticamente para desarrollo
 
