@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  front-sub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80" # Exponer el puerto 80 del contenedor en el puerto 8081 de la máquina host
+    networks:
+      - my_network # Conectar el contenedor a la red my_network
+
+networks:
+  my_network:
+    driver: bridge
